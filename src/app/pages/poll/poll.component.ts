@@ -18,14 +18,14 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./poll.component.css']
 })
 export class PollComponent implements OnInit, OnDestroy {
-  private isPolling: boolean;
-  private subscription: Subscription;
-  private channel: string;
-  private options: Array<Option>;
-  private voters: Array<User>;
-  private horizontalChart: ChartOptions;
-  private pieChart: ChartOptions;
-  private chat: any = [];
+  public isPolling: boolean;
+  public subscription: Subscription;
+  public channel: string;
+  public options: Array<Option>;
+  public voters: Array<User>;
+  public horizontalChart: ChartOptions;
+  public pieChart: ChartOptions;
+  public chat: any = [];
 
   constructor(
     private activateRoute: ActivatedRoute,
