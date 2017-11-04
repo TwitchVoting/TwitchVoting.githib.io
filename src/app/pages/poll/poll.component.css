@@ -1,0 +1,40 @@
+.options { background-color: #fff; height: 100vh; overflow-y: scroll; padding: 5% 20px; 
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+    /* box-shadow: 0 20px 20px rgba(0,0,0,.08); */
+}
+.options::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+    display: none;
+}
+.btn + .btn { margin-left: 0; }
+.options .btn-toolbar { display: flex; justify-content: space-between; }
+
+.results { height: 100vh; overflow-y: scroll; padding: 5% 20px; }
+.results .col { padding: 15px; }
+
+:host /deep/ .results  svg { min-height: 200px; }
+ngx-charts-pie-chart { min-height: 300px; }
+
+.input-group { margin: 20px 0; }
+.card-container { padding: 15px; background-color: #fff; }
+.card { background-color: #fff; border: 0; min-height: 300px; }
+.fdb-block { background-color: inherit; }
+
+.chat-container { padding: 30px; height: 330px; position: relative; }
+.chat { overflow: scroll; -ms-overflow-style: none; overflow: -moz-scrollbars-none; }
+.chat .username { color: #9577cd; }
+.chat p { margin-bottom: 0.25rem; }
+.chat::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+    display: none;
+}
+
+.btn { line-height: 1rem; }
+.input-group-btn .btn { padding: 0 10px; font-weight: 800; background-color: #d1c4e9; border-color: #d1c4e9; }
+.input-group-btn .btn:hover { background-color: #9577cd; }
+
+.card-container, .chat-container { transition: all 0.3s; }
+.card-container:hover, .chat-container:hover { box-shadow: 0 20px 20px rgba(0,0,0,.08); }

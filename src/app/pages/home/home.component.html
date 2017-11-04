@@ -1,0 +1,32 @@
+<section class="fdb-block">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6 text-center">
+                <h1>Channel Name:</h1>
+                <div class="input-group mt-4 mb-4">
+                    <input
+                        (keyup.enter)="createPoll()"
+                        [(ngModel)]="channel"
+                        type="text"
+                        class="form-control"
+                        placeholder="Enter your channel name"
+                    >
+                    <span class="input-group-btn">
+                        <button
+                            (click)="createPoll()"
+                            class="btn"
+                            type="button"
+                        >
+                            Create Poll
+                        </button>
+                    </span>
+                </div>
+
+                <p class="text-h4">
+                    Developed by 
+                    <a href="http://yoursgk.github.io">Galushko</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>

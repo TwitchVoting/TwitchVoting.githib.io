@@ -1,0 +1,73 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col col-lg-2 col-md-3 col-sm-12 col-xs-12 options">
+      <h2>Options:</h2>
+      <div *ngFor="let option of options; let i = index" class="option">
+        <div class="input-group">
+
+          <input [(ngModel)]="option.name" [value]="option.name" name="name" type="text" class="form-control" placeholder="Enter your option"
+            autocomplete="off">
+          <span class="input-group-btn">
+            <button (click)="removeOption(i)" class="btn btn-secondary" title="Remove option">
+              -
+            </button>
+          </span>
+
+        </div>
+      </div>
+      <button (click)="addOption()" class="btn btn-block" title="Add new option">
+        Add
+      </button>
+    </div>
+    <div class="col col-lg-10 col-md-9 col-sm-12 col-xs-12 results">
+      <div class="container-fluid">
+          <button (click)="startPolling()" class="btn" title="Start polling">
+              Start
+            </button>
+            <button (click)="stopPolling()" class="btn" title="Stop polling">
+              Stop
+            </button>
+        <div class="row">
+          <div class="col col-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="card-container">
+              <div class="card">
+                <ngx-charts-bar-horizontal [results]="options" [view]="horizontalChart.view" [gradient]="horizontalChart.gradient" [xAxis]="true"
+                  [yAxis]="horizontalChart.showYAxis" [legend]="true" [showXAxisLabel]="horizontalChart.xAxisLabel" [showYAxisLabel]="horizontalChart.showYAxisLabel"
+                  [xAxisLabel]="horizontalChart.xAxisLabel" [yAxisLabel]="horizontalChart.yAxisLabel">
+                </ngx-charts-bar-horizontal>
+              </div>
+            </div>
+          </div>
+          <div class="col col-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="card-container">
+              <div class="card">
+                <ngx-charts-bar-vertical [results]="options" [view]="horizontalChart.view" [gradient]="horizontalChart.gradient" [xAxis]="true"
+                  [yAxis]="false" [legend]="false" [showXAxisLabel]="horizontalChart.showXAxisLabel"
+                  [showYAxisLabel]="horizontalChart.showYAxisLabel" [xAxisLabel]="horizontalChart.xAxisLabel" [yAxisLabel]="horizontalChart.yAxisLabel">
+                </ngx-charts-bar-vertical>
+              </div>
+            </div>
+          </div>
+          <div class="col col-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="card-container">
+              <div class="card">
+                <ngx-charts-pie-chart [results]="options" [view]="pieChart.view" [legend]="pieChart.showLegend" [labels]="pieChart.showLabels">
+                </ngx-charts-pie-chart>
+              </div>
+            </div>
+          </div>
+          <div class="col col-6 col-lg-6 col-md-6 col-sm-6">
+            <div class="card chat-container">
+              <div class="chat" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+                <p *ngFor="let message of chat">
+                  <span class="username">{{ message.username }}:</span>
+                  <span class="message">{{ message.message }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

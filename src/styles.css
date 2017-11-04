@@ -1,0 +1,32 @@
+body {
+  background-color: #f5f5f5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  color: #444444;
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  color: #9577cd;
+}
+
+a:hover {
+  color: #7852bf;
+}
+
+.btn {
+  background-color: #a48ad4;
+  border-color: #a48ad4;
+  border-radius: .25rem;
+}
+
+.btn:hover,
+.btn:not([disabled]):not(.disabled):active {
+  background-color: #9577cd;
+  border-color: #9577cd;
+}
